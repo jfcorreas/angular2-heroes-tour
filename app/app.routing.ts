@@ -1,9 +1,9 @@
-import { provideRouter, RouterConfig }  from '@angular/router';
+import { Routes, RouterModule }  from '@angular/router';
 import { HeroesComponent } from './heroes.component';
 import { DashboardComponent } from './dashboard.component';
 import { HeroDetailComponent } from './hero-detail.component';
 
-const routes: RouterConfig = [
+const appRoutes: Routes = [
   {
     path: 'detail/:id',
     component: HeroDetailComponent
@@ -23,6 +23,4 @@ const routes: RouterConfig = [
   }
 ];
 
-export const appRouterProviders = [
-  provideRouter(routes)
-];
+export const routing = RouterModule.forRoot(appRoutes);

@@ -1,7 +1,7 @@
 import { bootstrap }    from '@angular/platform-browser-dynamic';
 import { AppComponent } from './app.component';
-import { appRouterProviders } from './app.routes';
+import { routing } from './app.routing';
 
 bootstrap(AppComponent, [
-  appRouterProviders
+  routing
 ]);

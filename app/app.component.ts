@@ -1,23 +1,17 @@
-import { Component }       from '@angular/core';
-import { HeroService }     from './hero.service';
-import { ROUTER_DIRECTIVES } from '@angular/router';
+import { Component }          from '@angular/core';
+import './rxjs-extensions';
 
 @Component({
-  moduleId: module.id,
   selector: 'my-app',
-  styleUrls: ['app.component.css'],
   template: `
     <h1>{{title}}</h1>
     <nav>
-      <a [routerLink]="['/dashboard']" routerLinkActive="active">Dashboard</a>
-      <a [routerLink]="['/heroes']" routerLinkActive="active">Heroes</a>
+      <a routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
+      <a routerLink="/heroes" routerLinkActive="active">Heroes</a>
     </nav>
     <router-outlet></router-outlet>
   `,
-  directives: [ROUTER_DIRECTIVES],
-  providers: [
-    HeroService
-  ]
+  styleUrls: ['app/app.component.css']
 })
 export class AppComponent {
   title = 'Tour of Heroes';
